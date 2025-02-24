@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb;
     public float moveForce;
     public float jumpForce;
+    public GameObject interactIcon;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +41,22 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Interactable"))
+        {
+            interactIcon.SetActive(true);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Interactable"))
+        {
+            interactIcon.SetActive(false);
         }
     }
 }
