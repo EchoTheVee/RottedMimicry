@@ -1,0 +1,45 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerController : MonoBehaviour
+{
+    public float horizontalInput;
+    public bool isOnGround;
+    private Rigidbody2D playerRb;
+    public float moveForce;
+    public float jumpForce;
+    // Start is called before the first frame update
+    void Start()
+    {
+        playerRb = GetComponent<Rigidbody2D>();
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        horizontalInput = Input.GetAxis("Horizontal");
+        playerRb.AddForce(Vector2.right * moveForce * horizontalInput);
+
+        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        {
+            playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isOnGround = false;
+        }
+    }
+}
