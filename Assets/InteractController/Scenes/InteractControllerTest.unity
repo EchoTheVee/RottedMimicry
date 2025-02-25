@@ -122,6 +122,58 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &138128926
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 138128928}
+  - component: {fileID: 138128927}
+  m_Layer: 0
+  m_Name: DoorwayHolder1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &138128927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138128926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d629447fdcab843b516bb02c6d3e8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  iC: {fileID: 521437726}
+  iC2: {fileID: 417163234}
+  pc: {fileID: 0}
+  teleportPosition: {fileID: 417163233}
+  teleportPosition2: {fileID: 521437722}
+  hasTeleported1: 0
+  hasTeleported2: 0
+  timeToWait: 2
+--- !u!4 &138128928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 138128926}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 22.154686, y: 0.033957478, z: -0.03339898}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &417163233
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,6 +208,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactIcon: {fileID: 534849320}
   isInteractedWith: 0
+  pIS: 0
 --- !u!61 &417163235
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -256,7 +309,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417163233}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6367ba27bd593874fbb88865d861effa, type: 3}
   m_Name: 
@@ -524,6 +577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   interactIcon: {fileID: 534849320}
   isInteractedWith: 0
+  pIS: 0
 --- !u!114 &521437727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,7 +585,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 521437722}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6367ba27bd593874fbb88865d861effa, type: 3}
   m_Name: 
@@ -830,6 +884,7 @@ MonoBehaviour:
   moveForce: 1
   jumpForce: 5
   interactIcon: {fileID: 534849320}
+  canTeleport: 1
 --- !u!212 &1000056090
 SpriteRenderer:
   m_ObjectHideFlags: 0
