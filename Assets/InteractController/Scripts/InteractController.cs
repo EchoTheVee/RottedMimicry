@@ -7,6 +7,8 @@ public class InteractController : MonoBehaviour
     public GameObject interactIcon;
     public bool isInteractedWith;
     public bool pIS;
+    public bool isItem;
+    public bool isDoorway;
 
     // Start is called before the first frame update
     void Start()
@@ -30,9 +32,21 @@ public class InteractController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        Debug.Log($"I've been touched by {collision.gameObject.name}");
-        pIS = true;
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log($"I've been touched by {collision.gameObject.name}");
+            pIS = true;
+
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+        pIS = false;
+
+        }
     }
 
 

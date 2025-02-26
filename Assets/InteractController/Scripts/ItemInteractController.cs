@@ -20,7 +20,7 @@ public class ItemInteractController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((interactIcon.activeInHierarchy) && ic.pIS && iIS && Input.GetKeyDown(KeyCode.E))
+        if ((interactIcon.activeInHierarchy) && ic.pIS && iIS && Input.GetKeyDown(KeyCode.E) && ic.isItem)
         {
             //ih.itemName = itemName;
             ih.itemGrabbed = itemNumber;
@@ -32,8 +32,8 @@ public class ItemInteractController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
-        iIS = true;
+            ic.isItem = true;
+            iIS = true;
         }
     }
 
@@ -41,7 +41,7 @@ public class ItemInteractController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-
+            ic.isItem = false;
             iIS = false;
         }
     }

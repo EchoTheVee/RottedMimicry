@@ -27,7 +27,7 @@ public class DoorHolderInteractable : MonoBehaviour
         //hasTeleported2 = !hasTeleported1;
         //hasTeleported1 = !hasTeleported2;
 
-        if (iC.isInteractedWith  && Input.GetKeyDown(KeyCode.E) && pc.canTeleport)
+        if (iC.isInteractedWith  && Input.GetKeyDown(KeyCode.E) && pc.canTeleport && iC.isDoorway)
         {
             Debug.Log($"Teleporting to {teleportPosition.name}");
             //DoorTransition();
@@ -38,7 +38,7 @@ public class DoorHolderInteractable : MonoBehaviour
             StartCoroutine(TeleportCooldown());
         }
 
-        if (iC2.isInteractedWith  && Input.GetKeyDown(KeyCode.E) && pc.canTeleport)
+        if (iC2.isInteractedWith  && Input.GetKeyDown(KeyCode.E) && pc.canTeleport && iC2.isDoorway)
         {
             Debug.Log($"Teleporting to {teleportPosition2.name}");
             //DoorTransition();
