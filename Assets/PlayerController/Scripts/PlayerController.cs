@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     public float moveForce;
     public float jumpForce;
     public GameObject interactIcon;
+    public bool canTeleport = true;
     // Start is called before the first frame update
     void Start()
     {
