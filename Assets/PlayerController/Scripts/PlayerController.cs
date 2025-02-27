@@ -18,10 +18,15 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         horizontalInput = Input.GetAxis("Horizontal");
         playerRb.AddForce(Vector2.right * moveForce * horizontalInput);
+
+    }
+
+    void Update()
+    {
 
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {

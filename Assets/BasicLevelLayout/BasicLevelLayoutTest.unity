@@ -6056,7 +6056,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   horizontalInput: 0
   isOnGround: 0
-  moveForce: 1
+  moveForce: 25
   jumpForce: 5
   interactIcon: {fileID: 8606608104215073610}
   canTeleport: 1
