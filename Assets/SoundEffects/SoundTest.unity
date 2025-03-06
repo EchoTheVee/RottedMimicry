@@ -384,8 +384,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003d3072f42bab34bbb3b029aea5f040, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  walk: {fileID: 8300000, guid: 12e0b49733adf8949aa9aecdc8745d04, type: 3}
+  walk: {fileID: 8300000, guid: 8c4c13961d6250048b0e7d9acf8e21be, type: 3}
   As: {fileID: 353095606}
+  audioLength: 0
 --- !u!1 &491922574
 GameObject:
   m_ObjectHideFlags: 0
