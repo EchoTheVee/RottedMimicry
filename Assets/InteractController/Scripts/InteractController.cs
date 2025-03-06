@@ -9,6 +9,7 @@ public class InteractController : MonoBehaviour
     public bool pIS;
     public bool isItem;
     public bool isDoorway;
+    public bool isGUI;
 
     // Start is called before the first frame update
     void Start()
