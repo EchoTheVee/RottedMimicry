@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     public float jumpForce;
     public GameObject interactIcon;
     public bool canTeleport = true;
+    public Animator anim;
+    public SpriteRenderer sr;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,10 +29,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-
+        anim.SetFloat("horizontalInputP", horizontalInput);
+        anim.SetBool("isOnGroundP", isOnGround);
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
             playerRb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            isOnGround = false;
+        }
+
+        if (horizontalInput >= 0.1)
+        {
+            sr.flipX = false;
+        }
+
+        if (horizontalInput <= -0.1)
+        {
+            sr.flipX = true;
         }
     }
 
