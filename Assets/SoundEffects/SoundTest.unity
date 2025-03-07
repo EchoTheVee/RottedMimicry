@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 353095604}
   - component: {fileID: 353095606}
   - component: {fileID: 353095607}
+  - component: {fileID: 353095608}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -400,6 +401,23 @@ MonoBehaviour:
   iR: {fileID: 0}
   doorIr: {fileID: 0}
   interactIcon: {fileID: 50275246}
+--- !u!114 &353095608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353095599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc88c28935fa7347bc49863d4eb5c8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemGrabbed: 0
+  hasItem1: 0
+  hasItem2: 0
+  hasItem3: 0
+  hasItem4: 0
 --- !u!1 &491922574
 GameObject:
   m_ObjectHideFlags: 0

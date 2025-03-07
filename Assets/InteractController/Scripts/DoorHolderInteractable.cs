@@ -13,12 +13,19 @@ public class DoorHolderInteractable : MonoBehaviour
     public bool hasTeleported1;
     public bool hasTeleported2;
     public int timeToWait;
+
+    //Xander touched it.
+    public PlayerAudio playerAudio;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("Player");
         pc = GameObject.Find("Player").GetComponent<PlayerController>();
         //iC = GetComponent<InteractController>();
+
+        // xanders scandalaus touch
+        playerAudio.GetComponent<PlayerAudio>();
     }
 
     // Update is called once per frame
@@ -32,6 +39,10 @@ public class DoorHolderInteractable : MonoBehaviour
             Debug.Log($"Teleporting to {teleportPosition.name}");
             //DoorTransition();
             player.transform.position = teleportPosition.transform.position;
+
+            //omg he touched the butt
+            playerAudio.PlayDoorSound();
+
             //hasTeleported1 = true;
             //StartCoroutine(TransitionWait());
             pc.canTeleport = false;
@@ -43,6 +54,10 @@ public class DoorHolderInteractable : MonoBehaviour
             Debug.Log($"Teleporting to {teleportPosition2.name}");
             //DoorTransition();
             player.transform.position = teleportPosition2.transform.position;
+
+            // omg he touched the booty again
+            playerAudio.PlayDoorSound();
+
             //hasTeleported2 = true;
             //StartCoroutine(TransitionWait2());
             pc.canTeleport = false;

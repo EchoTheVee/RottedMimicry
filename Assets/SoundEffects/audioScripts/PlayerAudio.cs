@@ -29,7 +29,13 @@ public class PlayerAudio : MonoBehaviour
     {
         if (interactIcon.activeInHierarchy && Input.GetKeyDown(KeyCode.E))
         {
-            As.PlayOneShot(door);
+            As.PlayOneShot(interactable);
+        }
+       // else ()
+
+        if (interactIcon.activeInHierarchy && Input.GetKeyDown(KeyCode.Tab))
+        {
+            As.PlayOneShot(inventory);
         }
 
         horizontalInput = Input.GetAxis("Horizontal");
@@ -52,5 +58,10 @@ public class PlayerAudio : MonoBehaviour
 
 
 
+    }
+
+    public void PlayDoorSound()
+    {
+        As.PlayOneShot(door);
     }
 }

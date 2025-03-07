@@ -6,6 +6,12 @@ MonoImporter:
   defaultReferences:
   - walk: {fileID: 8300000, guid: 2bf8d93e691de4a47a9b918764a3aeac, type: 3}
   - As: {instanceID: 0}
+  - interactable: {fileID: 8300000, guid: 8c4c13961d6250048b0e7d9acf8e21be, type: 3}
+  - door: {fileID: 8300000, guid: 580d5e5c2461ebe4580197618cbb655a, type: 3}
+  - inventory: {instanceID: 0}
+  - iR: {instanceID: 0}
+  - doorIr: {instanceID: 0}
+  - interactIcon: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
