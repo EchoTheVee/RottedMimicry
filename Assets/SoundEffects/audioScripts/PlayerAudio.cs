@@ -11,15 +11,15 @@ public class PlayerAudio : MonoBehaviour
     public AudioClip inventory;
     private float horizontalInput;
     public bool audioLength;
-    public GameObject iR;
-    public DoorHolderInteractable doorIr;
+    //public GameObject iR;
+    //public DoorHolderInteractable doorIr;
     public GameObject interactIcon;
 
     // Start is called before the first frame update
     void Start()
     {
         As = GetComponent<AudioSource>();
-        doorIr = GetComponent<DoorHolderInteractable>();
+        //doorIr = GetComponent<DoorHolderInteractable>();
         audioLength = false;
         
     }
@@ -51,8 +51,9 @@ public class PlayerAudio : MonoBehaviour
             audioLength = true;
         }
 
-        if (horizontalInput == 0)
+        if (horizontalInput >= -0.1 && horizontalInput <= 0.1)
         {
+            As.Stop();
             audioLength = false;
         }
 
